@@ -1,12 +1,18 @@
 {
   "name": "movielog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Training for making a video log app. Making a video log web app that user can record from thier webcam",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "yasu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7"
+  }
 }
