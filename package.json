@@ -2,10 +2,10 @@
   "name": "movie.log",
   "version": "1.0.0",
   "description": "Training for making a video log app. Making a video log web app that user can record from thier webcam",
-  "main": "server.js",
+  "main": "./indexrtc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node indexrtc.js"
   },
   "author": "yasu",
   "license": "ISC",
@@ -17,6 +17,8 @@
     "body-parser": "^1.16.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "http-server": "^0.9.0",
     "mongoose": "^4.7.7",
     "recordrtc-nodejs": "^1.0.1"
   }

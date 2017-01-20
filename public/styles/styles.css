@@ -1,0 +1,27 @@
+html { background-color: #FBFEF9; }
+
+body {
+    background-color: yellow;
+    /*border: 1px solid rgb(15, 158, 238);*/
+    margin: 1% 20%;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #FBFEF9;
+}
+
+a {
+    color: #2844FA;
+    text-decoration: none;
+}
+
+a:hover, a:focus { color: #1B29A4; }
+
+a:active { color: #000; }
+
+/*audio, video {
+    border: 0px solid rgb(15, 158, 238); width: 94%;
+}*/
+button[disabled], input[disabled] { background: rgba(216, 205, 205, 0.2); border: 1px solid rgb(233, 224, 224);}
