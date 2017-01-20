@@ -7,7 +7,7 @@ function home(response) {
     response.writeHead(200, {
         'Content-Type': 'text/html'
     });
-    response.end(fs.readFileSync('./views/index.html'));
+    response.end(fs.readFileSync('./views/record.html'));
 }
 
 // this function uploads files
@@ -72,16 +72,28 @@ function serveStatic(response, pathname) {
         extensionTypes = {
             'js': 'application/javascript',
             'webm': 'video/webm',
+            'mp4': 'video/mp4',
+            'wav': 'audio/wav',
+            'ogg': 'audio/ogg',
             'gif': 'image/gif'
         };
 
     response.writeHead(200, {
         'Content-Type': extensionTypes[extension]
     });
-    if (extensionTypes[extension] == 'video/webm')
+    if (hasMediaType(extensionTypes[extension]))
         response.end(fs.readFileSync('.' + pathname));
     else
-        response.end(fs.readFileSync('./views' + pathname));
+        response.end(fs.readFileSync('./static' + pathname));
+}
+
+function hasMediaType(type) {
+    var isHasMediaType = false;
+    ['audio/wav', 'audio/ogg', 'video/webm', 'video/mp4'].forEach(function(t) {
+      if(t== type) isHasMediaType = true;
+    });
+
+    return isHasMediaType;
 }
 
 function ifWin(response, files) {

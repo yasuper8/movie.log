@@ -2,10 +2,10 @@
   "name": "movie.log",
   "version": "1.0.0",
   "description": "Training for making a video log app. Making a video log web app that user can record from thier webcam",
-  "main": "./indexrtc.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node indexrtc.js"
+    "start": "node index.js"
   },
   "author": "yasu",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "url": "https://github.com/yasuper8/movie.log"
   },
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.16.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0",

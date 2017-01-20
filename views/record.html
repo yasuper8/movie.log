@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Movie.log</title>
+  <script>
+      if (location.href.indexOf('file:') == 0) {
+          document.write('<h1 style="color:red;">Please load this HTML file on HTTP or HTTPS.</h1>');
+      }
+  </script>
+  <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+  <script src="https://cdn.webrtc-experiment.com/gif-recorder.js"></script>
+  <script src="https://cdn.webrtc-experiment.com/getScreenId.js"></script>
+  <!-- for Edige/FF/Chrome/Opera/etc. getUserMedia support -->
+  <script src="https://cdn.webrtc-experiment.com/gumadapter.js"></script>
+  <!-- bootstrap css -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- vendor scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+  <!-- custum css -->
+  <link rel="stylesheet" href="./styles/styles.css">
+  <!-- application scripts -->
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/record.js"></script>
+
+</head>
+
+<body>
+  <br>
+  <br>
+  <input type="filepicker" data-fp-apikey="AN8oAV0VTY2cBsoIxWrk7z"
+  onchange="alert(event.fpfile.url)">
+  <br><br><br>
+    <h1>Movie.log</h1>
+    <!-- <p>
+        <video></video>
+    </p><hr />
+
+    <div>
+        <label id="percentage">0%</label>
+        <progress id="progress-bar" value=0></progress><br />
+    </div>
+
+    <hr />
+
+    <div>
+        <button id="btn-start-recording" class="btn btn-info btn-lg">Start Recording</button>
+        <button id="btn-stop-recording" disabled="" class="btn btn-info btn-lg">Stop Recording</button>
+    </div> -->
+    <article>
+
+        <section class="experiment recordrtc">
+            <h2 class="header">
+                <select class="recording-media btn btn-info btn-lg">
+                    <option value="record-audio-plus-video">Microphone+Camera</option>
+                    <option value="record-audio">Microphone</option>
+                    <option value="record-screen">Full Screen</option>
+                    <option value="record-audio-plus-screen">Microphone+Screen</option>
+                </select>
+
+
+                into
+                <select class="media-container-format btn btn-info btn-lg">
+                    <option>WebM</option>
+                    <option>Mp4</option>
+                    <option>WAV</option>
+                    <option>Ogg</option>
+                    <option>Gif</option>
+                </select>
+
+                <button class="btn btn-info btn-lg">Start Recording</button>
+            </h2>
+
+            <div style="text-align: center; display: none;">
+                <button id="save-to-disk" class="btn btn-info btn-lg">Save To Disk</button>
+                <button id="open-new-tab" class="btn btn-info btn-lg">Open New Tab</button>
+            </div>
+
+            <br>
+
+            <video controls muted id="video-view"></video>
+        </section>
+
+      
+
+    </article>
+
+
+</body>
+
+</html>

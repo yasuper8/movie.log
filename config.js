@@ -1,4 +1,4 @@
-exports.port = 3000;
+exports.port = 8000;
 exports.upload_dir = './uploads';
 
 exports.s3 = {
