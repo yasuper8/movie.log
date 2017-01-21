@@ -1,6 +1,3 @@
-// Muaz Khan     - www.MuazKhan.com
-// MIT License   - www.WebRTC-Experiment.com/licence
-// Source Code   - github.com/muaz-khan/RecordRTC/tree/master/RecordRTC-to-Nodejs
 
 function respondWithHTTPCode(response, code) {
     response.writeHead(code, { 'Content-Type': 'text/plain' });

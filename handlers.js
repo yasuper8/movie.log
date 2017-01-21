@@ -2,13 +2,64 @@ var config = require('./config'),
     fs = require('fs'),
     sys = require('sys'),
     exec = require('child_process').exec;
+// var bcrypt = require('./static/scripts/bcrypt');
 
-function home(response) {
+// var express = require('express'),
+//     app = express(),
+//     bodyParser = require('body-parser'),
+//     controllers = require('./controllers'),
+//     mongoose = require('mongoose'),
+//     session = require('express-session');
+//
+// var db = require('./models');
+// var User = require('./models/user');
+
+
+function record(response) {
     response.writeHead(200, {
         'Content-Type': 'text/html'
     });
     response.end(fs.readFileSync('./views/record.html'));
 }
+
+function home(response) {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    response.end(fs.readFileSync('./views/index.html'));
+}
+
+// // login route with placeholder response
+// app.get('/login', function (req, res) {
+//   res.render(__dirname + '/views/login.ejs');
+// });
+//
+// // signup route (renders signup view)
+// app.get('/signup', function (req, res) {
+//   res.render(__dirname + '/views/signup.ejs');
+// });
+
+function signup(response) {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    response.end(fs.readFileSync('./views/signup.ejs')); //change to html or just be consistent
+}
+
+function login(response) {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    response.end(fs.readFileSync('./views/login.ejs')); //change to html or just be consistent
+}
+
+function users(response) {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    response.end(fs.readFileSync('./views/user-show.ejs')); //change to html or just be consistent
+}
+
 
 // this function uploads files
 
@@ -160,6 +211,10 @@ function ifMac(response, files) {
     });
 }
 
+exports.users = users;
+exports.signup = signup;
+exports.login = login;
 exports.home = home;
+exports.record = record;
 exports.upload = upload;
 exports.serveStatic = serveStatic;

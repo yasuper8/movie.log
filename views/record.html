@@ -28,6 +28,41 @@
   <script src="./scripts/app.js"></script>
   <script src="./scripts/record.js"></script>
 
+  <style>
+  html { background-color: yellow; }
+
+  body {
+      background-color: #FBFEF9;
+      /*border: 1px solid rgb(15, 158, 238);*/
+      margin: 1% 15%;
+      text-align: center;
+  }
+
+  hr {
+      border: 0;
+      border-top: 1px solid #FBFEF9;
+  }
+
+  a {
+      color: #2844FA;
+      text-decoration: none;
+  }
+
+  a:hover, a:focus { color: #1B29A4; }
+
+  a:active { color: #000; }
+
+
+  #video-view {
+    width: 70%;
+  }
+
+  /*audio, video {
+      border: 0px solid rgb(15, 158, 238); width: 94%;
+  }*/
+  button[disabled], input[disabled] { background: rgba(216, 205, 205, 0.2); border: 1px solid rgb(233, 224, 224);}
+</style>
+
 </head>
 
 <body>
@@ -52,43 +87,47 @@
         <button id="btn-start-recording" class="btn btn-info btn-lg">Start Recording</button>
         <button id="btn-stop-recording" disabled="" class="btn btn-info btn-lg">Stop Recording</button>
     </div> -->
-    <article>
 
-        <section class="experiment recordrtc">
-            <h2 class="header">
-                <select class="recording-media btn btn-info btn-lg">
-                    <option value="record-audio-plus-video">Microphone+Camera</option>
-                    <option value="record-audio">Microphone</option>
-                    <option value="record-screen">Full Screen</option>
-                    <option value="record-audio-plus-screen">Microphone+Screen</option>
-                </select>
+    <div class="container">
+      <div class="row">
+        <div class="col col-xs-12">
+
+          <section class="experiment recordrtc">
+              <h2 class="header">
+                  <select class="recording-media btn btn-info btn-lg">
+                      <option value="record-audio-plus-video">Microphone+Camera</option>
+                      <option value="record-audio">Microphone</option>
+                      <option value="record-screen">Full Screen</option>
+                      <option value="record-audio-plus-screen">Microphone+Screen</option>
+                  </select>
 
 
-                into
-                <select class="media-container-format btn btn-info btn-lg">
-                    <option>WebM</option>
-                    <option>Mp4</option>
-                    <option>WAV</option>
-                    <option>Ogg</option>
-                    <option>Gif</option>
-                </select>
+                  into
+                  <select class="media-container-format btn btn-info btn-lg">
+                      <option>WebM</option>
+                      <option>Mp4</option>
+                      <option>WAV</option>
+                      <option>Ogg</option>
+                      <option>Gif</option>
+                  </select>
 
-                <button class="btn btn-info btn-lg">Start Recording</button>
-            </h2>
+                  <button class="btn btn-info btn-lg">Start Recording</button>
+              </h2>
 
-            <div style="text-align: center; display: none;">
-                <button id="save-to-disk" class="btn btn-info btn-lg">Save To Disk</button>
-                <button id="open-new-tab" class="btn btn-info btn-lg">Open New Tab</button>
-            </div>
+              <div style="text-align: center; display: none;">
+                  <button id="save-to-disk" class="btn btn-info btn-lg">Save To Disk</button>
+                  <button id="open-new-tab" class="btn btn-info btn-lg">Open New Tab</button>
+              </div>
 
-            <br>
+              <br>
 
-            <video controls muted id="video-view"></video>
-        </section>
+              <video controls muted id="video-view"></video>
+          </section>
 
-      
+        </div>
+      </div>
+    </div>
 
-    </article>
 
 
 </body>
