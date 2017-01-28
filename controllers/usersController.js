@@ -31,9 +31,11 @@ function create(req, res) {
   });
 }
 
+// TODO: Don't forget to add Update and Destroy
 
 // export public methods here
 module.exports = {
   index: index,
   create: create
+  // TODO: Do you want to include displayUser here as well? Otherwise you won't be able to access this controller method
 };

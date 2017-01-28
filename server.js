@@ -1,5 +1,5 @@
 // require express and other modules
-
+// TODO: Which file is called first, this one or index.js? There seems to be some unecessary files in here.
 var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
@@ -50,6 +50,7 @@ app.get('/signup', function (req, res) {
 });
 //
 //
+
 // listen on port 3000
 app.listen(3000, function () {
   console.log('server started on locahost:3000');
